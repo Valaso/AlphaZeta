@@ -14,8 +14,8 @@
 		<link rel="icon" type="image/png" href="assets/images/favicon.png" />
 		<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
 		<link rel="stylesheet" href="assets/main.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-NbKgMv0o4r7P6qWzHvk9L4S7rQzZaccsgD52bffgInf0OCdDg45Ta8uBBKxAbIutsrM5TqB88DYp1EP0NePcdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 	</head>
 	<div id="background_load">
 		<div id="load_animation">
@@ -44,7 +44,7 @@ window.addEventListener('load', async () => {
     await waitForAnimationComplete();
 
     // Stop the Lottie animation
-    animation.stop();
+    animation.goToAndStop(animation.totalFrames - 1, true);
 
     // Trigger the GSAP animation after the current loop of the Lottie animation completes
     gsap.to("#background_load", { opacity: 0, yPercent: -100, duration: 1.5, ease: "power3.inOut" });
