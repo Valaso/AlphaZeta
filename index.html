@@ -47,8 +47,9 @@ window.addEventListener('load', async () => {
     animation.goToAndStop(animation.totalFrames - 1, true);
 
     // Trigger the GSAP animation after the current loop of the Lottie animation completes
-    gsap.to("#background_load", { opacity: 0, yPercent: -100, duration: 1.5, ease: "power3.inOut" });
-    gsap.to("#load_animation", { opacity: 0, duration: 1, ease: "power3.inOut" });
+    gsap.to("#background_load", { opacity: 0, duration: 2.1, ease: "power3.inOut" });
+	gsap.to("#background_load", { yPercent: -100, duration: 1.5, ease: "power3.inOut" });
+    gsap.to("#load_animation", { opacity: 0, duration: 1, delay: 0.5, ease: "power3.inOut" });
 });
 		</script>
 		</div>
@@ -68,7 +69,7 @@ window.addEventListener('load', async () => {
 									<h2 id="text05" class="style5">ALPHA ZETA</h2>
 									<ul id="buttons04" class="style1 buttons">
 										<li>
-											<a href="#intro" class="button n01 mainbutton">RESERVATIONS</a>
+											<a href="#intro"  id="main-button" class="button n01 mainbutton">RESERVATIONS</a>
 										</li>
 									</ul>
 								</div>

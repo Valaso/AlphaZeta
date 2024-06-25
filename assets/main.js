@@ -2198,7 +2198,7 @@
 		speed: 1600,
 		intensity: 1,
 		threshold: 1,
-		delay: 222,
+		delay: 2000,
 		replay: false
 	});
 	// Secondary titles
@@ -2225,6 +2225,14 @@
 		intensity: 3,
 		threshold: 1,
 		delay: 222,
+		replay: false
+	});
+	onvisible.add("#main-button", {
+		style: 'fade-up',
+		speed: 1500,
+		intensity: 3,
+		threshold: 1,
+		delay: 2000,
 		replay: false
 	});
 	// podnapisi
