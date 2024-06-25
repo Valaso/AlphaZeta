@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>AlphaZeta</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="color-scheme" content="light only" />
+		<meta name="description" content="Experience the best of Barcelona with Alpha Zeta. From exclusive boat and pool parties to curated nightlife experiences and summer activities, we&#039;ve got you covered. Book now!" />
+		<meta property="og:site_name" content="AlphaZeta" />
+		<meta property="og:title" content="AlphaZeta" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Experience the best of Barcelona with Alpha Zeta. From exclusive boat and pool parties to curated nightlife experiences and summer activities, we&#039;ve got you covered. Book now!" />
+		<link href="https://fonts.googleapis.com/css2?display=swap&family=Inter:ital,wght@0,600;0,700;1,600;1,700&family=Zen+Dots:ital,wght@0,400;1,400&family=Source+Sans+Pro:ital,wght@0,300;1,300" rel="stylesheet" type="text/css" />
+		<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+		<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+		<link rel="stylesheet" href="assets/main.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-NbKgMv0o4r7P6qWzHvk9L4S7rQzZaccsgD52bffgInf0OCdDg45Ta8uBBKxAbIutsrM5TqB88DYp1EP0NePcdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+	<div id="background_load">
+		<div id="load_animation">
+		<script>
+			// Load the Lottie animation
+let animation = bodymovin.loadAnimation({
+    container: document.getElementById("load_animation"),
+    path: "lionito.json",
+    renderer: "svg",
+    loop: true,  // Set the animation to loop
+    autoplay: true,
+    name: "loading animation"
+});
+animation.setSpeed(2);
+
+// Function to wait for the Lottie animation to complete its current loop
+function waitForAnimationComplete() {
+    return new Promise(resolve => {
+        animation.addEventListener('loopComplete', resolve, { once: true });
+    });
+}
+
+// Add an event listener for the window load event
+window.addEventListener('load', async () => {
+    // Wait for the current loop of the Lottie animation to complete
+    await waitForAnimationComplete();
+
+    // Stop the Lottie animation
+    animation.stop();
+
+    // Trigger the GSAP animation after the current loop of the Lottie animation completes
+    gsap.to("#background_load", { opacity: 0, yPercent: -100, duration: 1.5, ease: "power3.inOut" });
+    gsap.to("#load_animation", { opacity: 0, duration: 1, ease: "power3.inOut" });
+});
+		</script>
+		</div>
+	</div>
+	<body>
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="container01" class="style5 container default full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="style3 image">
+										<span class="frame"><img src="assets/images/image01.svg" alt="" /></span>
+									</div>
+									<h1 id="text01" class="style6">EVENT AGENCY</h1>
+									<h2 id="text05" class="style5">ALPHA ZETA</h2>
+									<ul id="buttons04" class="style1 buttons">
+										<li>
+											<a href="#intro" class="button n01 mainbutton">RESERVATIONS</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div id="container11" data-scroll-id="intro" data-scroll-behavior="center" data-scroll-offset="0" data-scroll-speed="" class="style2 container columns full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<h2 id="text27" class="style4">DISCOVER THE BEST OF BARCELONA WITH ALPHA</h2>
+										<p id="text28" class="style7">From pulsating nightlife and boat parties to luxurious pool parties, we curate unforgettable experiences that will keep you coming back for more.</p>
+										<ul id="buttons01" class="style2 buttons">
+											<li>
+												<a href="#first" class="button n01">ALL EVENTS</a>
+											</li>
+										</ul>
+									</div>
+									<div>
+										<div id="image10" class="style1 image" data-position="center">
+											<span class="frame"><img src="assets/images/image10.jpg" alt="" /></span>
+										</div>
+										<h3 id="text30" class="style9">Bars &amp; Night Life</h3>
+										<p id="text31" class="style2">Our expert guides will take you to the hottest bars and nightclubs in the city, giving you VIP access and exclusive deals. If you are looking for a wild night out, you have found the right place.</p>
+										<hr id="divider03">
+										<div id="image09" class="style1 image" data-position="center">
+											<span class="frame"><img src="assets/images/image09.jpg" alt="" /></span>
+										</div>
+										<h3 id="text37" class="style9">Pool Parties</h3>
+										<p id="text32" class="style2"> Night or day, makes no difference to us. Join us for a luxurious splash where the fun never ends. Enjoy a day of <a>sun, music, and bikinis,</a> making unforgettable memories with friends old and new.</p>
+										<hr id="divider02">
+									</div>
+									<div>
+										<div id="image11" class="style1 image" data-position="center">
+											<span class="frame"><img src="assets/images/image11.jpg" alt="" /></span>
+										</div>
+										<h3 id="text33" class="style9">Boat Parties</h3>
+										<p id="text34" class="style2">Our expert guides will take you to the hottest bars and nightclubs in the city, giving you VIP access and exclusive deals. Whether you&#39;re looking for a laid-back evening or a wild night out, our curated experiences will show you the best of what Barcelona&#39;s nightlife has to offer.</p>
+										<hr id="divider04">
+										<div id="image12" class="style1 image" data-position="center">
+											<span class="frame deferred"><img src="assets/images/image12.jpg" alt="" /></span>
+										</div>
+										<h3 id="text36" class="style9">Summer Activities</h3>
+										<p id="text35" class="style2"> Meet new people. Whether it’s a relaxed beach outing or a thrilling adventure, we have something for everyone to enjoy. Create unforgettable memories under the sun. </p>
+										<hr id="divider01">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container10" data-scroll-id="first" data-scroll-behavior="default" data-scroll-offset="0" data-scroll-speed="" class="style4 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<h2 id="text08" class="style4">FUTURE EVENTS</h2>
+									<p id="text02" class="style7">Get ready for the most exciting upcoming events in Barcelona. Everything from free entries, exclusive birthday parties and unforgettable bachelor parties to completely curated experiences.</p>
+								</div>
+							</div>
+						</div>
+						<div id="container03" class="style1 container columns">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image02" class="style2 image full">
+											<span class="frame"><img src="assets/images/image02.jpg" alt="" /></span>
+										</div>
+									</div>
+									<div>
+										<h3 id="text04" class="style9">DOWNTOWN free entry</h3>
+										<p id="text14" class="style2">With avant-garde design and a large dance floor, you can dance to the rhythm of Reggaeton, Commercial Music, and Top Hits. VIP areas provide a premium experience for a spectacular night out.</p>
+										<ul id="buttons03" class="style2 buttons">
+											<li>
+												<a href="https://my.weezevent.com/alphazeta-night" class="button n01">Get tickets</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container06" data-scroll-id="second" data-scroll-behavior="center" data-scroll-offset="0" data-scroll-speed="" class="style6 container columns">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<h3 id="text09" class="style9">SUTTON free entry</h3>
+										<p id="text10" class="style2">Experience the elite nightlife scene in style. Synonymous with luxury and exclusivity, Sutton is perfect for those seeking a high-end night out. Enjoy Commercial House, Reggaeton, and Top Hits.</p>
+										<ul id="buttons05" class="style2 buttons">
+											<li>
+												<a href="https://my.weezevent.com/alphazeta-night" class="button n01">Get tickets</a>
+											</li>
+										</ul>
+									</div>
+									<div>
+										<div id="image03" class="style2 image full">
+											<span class="frame"><img src="assets/images/image03.jpg" alt="" /></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container02" data-scroll-id="third" data-scroll-behavior="center" data-scroll-offset="0" data-scroll-speed="" class="style1 container columns">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<div id="image04" class="style2 image full">
+											<span class="frame"><img src="assets/images/image04.jpg" alt="" /></span>
+										</div>
+									</div>
+									<div>
+										<h3 id="text13" class="style9">COLORS free entry</h3>
+										<p id="text17" class="style2">Students love it here. This lively club offers a welcoming atmosphere, making it the perfect place to meet new friends while dancing to a mix of commercial hits and energetic beats.</p>
+										<ul id="buttons02" class="style2 buttons">
+											<li>
+												<a href="https://my.weezevent.com/alphazeta-night" class="button n01">Get tickets</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container07" data-scroll-id="fourth" data-scroll-behavior="center" data-scroll-offset="0" data-scroll-speed="" class="style10 container columns">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<h3 id="text15" class="style9">RAZZMATAZZ red love party</h3>
+										<p id="text22" class="style2"> Five-in-one nightclub extravaganza! With rooms offering indie, electronic, pop, experimental, and avant-garde music, there's something for everyone.</p>
+										<ul id="buttons07" class="style2 buttons">
+											<li>
+												<a href="https://my.weezevent.com/alphazeta-night" class="button n01">get tickets</a>
+											</li>
+										</ul>
+									</div>
+									<div>
+										<div id="image06" class="style2 image full">
+											<span class="frame deferred"><img src="assets/images/image06.jpg" alt="" /></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container05" data-scroll-id="subscribe" data-scroll-behavior="center" data-scroll-offset="0" data-scroll-speed="" class="style9 container columns full screen">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<h2 id="text12" class="style4">Stay tuned for the hottest parties in Barcelona</h2>
+										<p id="text11" class="style7">Whether you&#39;re here for a week or a longer period, we&#39;ve got you covered with the best events happening all year round.</p>
+									</div>
+									<div>
+										<form id="form01" method="post" action="#" class="style1">
+											<div class="inner">
+												<div class="field">
+													<input type="text" name="fname" id="form01-fname" placeholder="Name" maxlength="128" required />
+												</div>
+												<div class="field">
+													<input type="email" name="email" id="form01-email" placeholder="Email" maxlength="128" required />
+												</div>
+												<div class="actions">
+													<button type="submit">Get Notified</button>
+												</div>
+											</div>
+											<input type="hidden" name="id" value="form01" />
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="container08" class="style3 container default">
+							<div class="wrapper">
+								<div class="inner">
+									<ul id="icons01" class="style1 icons">
+										<li>
+											<a class="n01" href="https://domain.ext/path" aria-label="Twitter">
+												<svg><use xlink:href="assets/icons.svg#twitter"></use></svg>
+												<span class="label">Twitter</span>
+											</a>
+										</li><li>
+											<a class="n02" href="https://domain.ext/path" aria-label="Instagram">
+												<svg><use xlink:href="assets/icons.svg#instagram"></use></svg>
+												<span class="label">Instagram</span>
+											</a>
+										</li><li>
+											<a class="n03" href="https://domain.ext/path" aria-label="Facebook">
+												<svg><use xlink:href="assets/icons.svg#facebook"></use></svg>
+												<span class="label">Facebook</span>
+											</a>
+										</li><li>
+											<a class="n04" href="https://domain.ext/path" aria-label="WhatsApp">
+												<svg><use xlink:href="assets/icons.svg#whatsapp"></use></svg>
+												<span class="label">WhatsApp</span>
+											</a>
+										</li><li>
+											<a class="n05" href="https://domain.ext/path" aria-label="Email">
+												<svg><use xlink:href="assets/icons.svg#email"></use></svg>
+												<span class="label">Email</span>
+											</a>
+										</li>
+									</ul>
+									<p id="text07" class="style3">© AlphaZeta. All rights reserved.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<script src="assets/main.js"></script>
+		<script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
+<script>
+// LENIS SMOOTH SCROLL
+const lenis = new Lenis({
+  lerp: 0.1, // Linear interpolation (lerp) intensity
+  smoothWheel: true, // Enable smooth scrolling for mouse wheel events
+  duration: 1.6, // Duration of scroll animation in seconds
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -8 * t)), // Custom easing function
+  orientation: 'vertical', // Scroll orientation (vertical or horizontal)
+  gestureOrientation: 'vertical', // Gesture orientation (vertical, horizontal, or both)
+  infinite: false, // Enable infinite scrolling
+  normalizeWheel: false, // Normalize wheel inputs across browsers
+  syncTouch: false // Sync touch device scroll with smooth scrolling
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+</script>
+	</body>
+</html>
